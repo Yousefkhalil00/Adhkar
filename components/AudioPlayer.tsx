@@ -231,7 +231,7 @@ export default function AudioPlayer({
             title="تقديم 10 ثواني"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-              <path d="M18 13a6 6 0 1 1-6-6v2.5l3.5-3.5L12 2.5V5a8 8 0 1 0 8 8h-2z" />
+              <path d="M6 13a6 6 0 1 0 6-6v2.5L8.5 6 12 2.5V5a8 8 0 1 1-8 8h2z" />
             </svg>
           </button>
 
@@ -268,7 +268,7 @@ export default function AudioPlayer({
             title="رجوع 10 ثواني"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-              <path d="M6 13a6 6 0 1 0 6-6v2.5L8.5 6 12 2.5V5a8 8 0 1 1-8 8h2z" />
+              <path d="M18 13a6 6 0 1 1-6-6v2.5l3.5-3.5L12 2.5V5a8 8 0 1 0 8 8h-2z" />
             </svg>
           </button>
         </div>
