@@ -81,7 +81,9 @@ export default function TafsirView({ surah, tafsir, scrollToAyah }: Props) {
         <p className="text-blue-500/50 text-xs mb-1">تفسير</p>
         <div className="flex items-center justify-center gap-3">
           <span className="text-amber-400/30 text-3xl">﴿</span>
-          <h1 className="text-amber-300 text-4xl font-bold">{surah.name}</h1>
+          <h1 className="text-amber-300 text-4xl font-bold font-[family-name:var(--font-amiri)]">
+            {surah.name}
+          </h1>
           <span className="text-amber-400/30 text-3xl">﴾</span>
         </div>
         <p className="text-blue-400/50 text-sm mt-1">
@@ -119,7 +121,6 @@ export default function TafsirView({ surah, tafsir, scrollToAyah }: Props) {
                   }
                 `}
               >
-                {/* ── Ayah header (always visible, clickable) ────── */}
                 <button
                   onClick={() => toggleAyah(ayah.numberInSurah)}
                   className="
@@ -141,10 +142,7 @@ export default function TafsirView({ surah, tafsir, scrollToAyah }: Props) {
                   </div>
 
                   {/* Ayah text */}
-                  <p
-                    className="flex-1 text-blue-100 text-lg leading-loose text-right"
-                    style={{ fontFamily: "'Amiri', 'Scheherazade New', serif" }}
-                  >
+                  <p className="flex-1 text-blue-100 text-lg leading-loose text-right font-[family-name:var(--font-amiri)]">
                     {ayah.text}
                     <span className="text-amber-400/50 text-base mx-1">
                       ﴿{ayah.numberInSurah}﴾
