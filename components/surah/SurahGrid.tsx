@@ -98,10 +98,12 @@ export default function SurahGrid({ surahs }: Props) {
             </div>
 
             {/* Info */}
-            <div className="flex-1 min-w-0 flex gap-1 justify-center flex-col">
+            <div className="flex-1 min-w-0 flex gap-2 justify-center flex-col">
               <p
-                className="text-amber-300 font-bold text-base truncate"
-                style={{ fontFamily: "'Amiri', 'Scheherazade New', serif" }}
+                className="text-amber-300 font-bold text-base"
+                style={{
+                  fontFamily: "'Amiri Quran', 'Scheherazade New', serif",
+                }}
               >
                 {stripTashkeel(surah.name)}
               </p>

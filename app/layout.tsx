@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Almarai } from "next/font/google";
+import { Amiri_Quran } from "next/font/google";
+
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
@@ -7,6 +9,12 @@ const almarai = Almarai({
   subsets: ["arabic"],
   weight: ["300", "400", "700", "800"],
   variable: "--font-almarai",
+});
+
+const Amiri = Amiri_Quran({
+  subsets: ["arabic"],
+  weight: ["400"],
+  variable: "--font-amiri",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${almarai.className} bg-blue-950  antialiased`}>
+      <body
+        className={`${almarai.className} ${Amiri.variable} bg-blue-950  antialiased`}
+      >
         <Navbar />
 
         {children}

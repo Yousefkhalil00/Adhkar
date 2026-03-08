@@ -25,7 +25,7 @@ export default function AdhkarSection() {
   );
 
   return (
-    <section className="relative w-full bg-blue-950 py-16 px-4 overflow-hidden">
+    <section className="relative w-full bg-blue-950 py-16 px-4 overflow-hidden ">
       <AdhkarHeader />
 
       {loading && (

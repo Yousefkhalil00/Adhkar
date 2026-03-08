@@ -125,10 +125,12 @@ export default function SurahDetail({ surah: initialSurah }: Props) {
       <div className="text-center mb-8">
         <div className="flex items-center justify-center gap-3">
           <span className="text-amber-400/30 text-3xl">﴿</span>
-          <h1 className="text-amber-300 text-4xl font-bold">{surah.name}</h1>
+          <h1 className="text-amber-300 text-4xl font-bold font-[family-name:var(--font-amiri)]">
+            {surah.name}
+          </h1>
           <span className="text-amber-400/30 text-3xl">﴾</span>
         </div>
-        <p className="text-blue-400/50 text-sm mt-1">
+        <p className="text-blue-400/50 text-sm mt-5">
           {surah.englishName} — {surah.englishNameTranslation}
         </p>
       </div>
@@ -161,19 +163,13 @@ export default function SurahDetail({ surah: initialSurah }: Props) {
       )}
 
       {surah.number !== 1 && surah.number !== 9 && (
-        <p
-          className="text-center text-amber-300/80 text-2xl mb-8 leading-loose"
-          style={{ fontFamily: "'Amiri', 'Scheherazade New', serif" }}
-        >
+        <p className="text-center text-amber-300/80 text-2xl mb-8 leading-loose font-[family-name:var(--font-amiri)]">
           {BISMILLAH}
         </p>
       )}
 
       <div className="p-6 rounded-2xl border border-blue-800/40 bg-blue-900/30">
-        <p
-          className="text-right leading-[2.8] text-xl text-blue-100"
-          style={{ fontFamily: "'Amiri', 'Scheherazade New', serif" }}
-        >
+        <p className="text-right leading-[2.8] text-xl text-blue-100 font-[family-name:var(--font-amiri)]">
           {surah.ayahs.map((ayah) => {
             const displayText =
               ayah.numberInSurah === 1 && ayah.text.startsWith("بِسْمِ")

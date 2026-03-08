@@ -17,7 +17,7 @@ export default function AdhkarCard({ category, onShowAll }: AdhkarCardProps) {
         bg-blue-950/60 border border-blue-700/40
         hover:border-amber-400/40 hover:bg-blue-900/80
         transition-all duration-300 shadow-lg
-        min-h-[200px]
+        min-h-[200px] h-[217.85px]
       "
       dir="rtl"
     >

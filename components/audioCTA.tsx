@@ -17,12 +17,13 @@ export default function AudioCTA() {
             </h2>
           </div>
           <div className="flex flex-wrap gap-4">
-            <Button src="/surah" light={false}>
+            <Button src="/surah" light={false} flex>
               استمع لتلاوة هادئة
             </Button>
             <Button
               src="https://www.pdfquran.com/download/standard1/standard1-quran.pdf"
               light
+              flex
             >
               تحميل المصحف
             </Button>
