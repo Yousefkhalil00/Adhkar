@@ -124,9 +124,9 @@ export default function SurahDetail({ surah: initialSurah }: Props) {
       {/* ── Surah title ─────────────────────────────────────────────── */}
       <div className="text-center mb-8">
         <div className="flex items-center justify-center gap-3">
-          <span className="text-amber-400/30 text-3xl">﴾</span>
-          <h1 className="text-amber-300 text-4xl font-bold">{surah.name}</h1>
           <span className="text-amber-400/30 text-3xl">﴿</span>
+          <h1 className="text-amber-300 text-4xl font-bold">{surah.name}</h1>
+          <span className="text-amber-400/30 text-3xl">﴾</span>
         </div>
         <p className="text-blue-400/50 text-sm mt-1">
           {surah.englishName} — {surah.englishNameTranslation}
