@@ -79,7 +79,7 @@ export default function TafsirView({ surah, tafsir, scrollToAyah }: Props) {
 
       <div className="text-center mb-8">
         <p className="text-blue-500/50 text-xs mb-1">تفسير</p>
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex items-center justify-center gap-3 py-4">
           <span className="text-amber-400/30 text-3xl">﴿</span>
           <h1 className="text-amber-300 text-4xl font-bold font-[family-name:var(--font-amiri)]">
             {surah.name}
