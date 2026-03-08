@@ -29,14 +29,13 @@ export default function AudioCTA() {
           </div>
         </div>
 
-        {/* Image side */}
         <div className="flex items-center justify-center">
           <Image
             src={quran}
             alt="quran"
             width={500}
             height={500}
-            className="w-full max-w-sm md:max-w-md"
+            className="w-full md:max-w-sm max-w-lg"
           />
         </div>
       </div>
