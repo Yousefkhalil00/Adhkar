@@ -1,6 +1,6 @@
 import { AdhkarCategory } from "@/components/adhkar/types";
 
-const ADHKAR_JSON_URL = "http://localhost:3000/adhkar.json";
+const ADHKAR_JSON_URL = "@/public/adhkar.json";
 
 export async function getAllCategories(): Promise<AdhkarCategory[]> {
   const res = await fetch(ADHKAR_JSON_URL, { cache: "force-cache" });
