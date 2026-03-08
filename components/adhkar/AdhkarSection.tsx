@@ -20,7 +20,7 @@ export default function AdhkarSection() {
     useState<AdhkarCategory | null>(null);
 
   const featuredCategories = allCategories.filter((cat) =>
-    FEATURED_CATEGORY_IDS.includes(cat.id),
+    FEATURED_CATEGORY_IDS.includes(Number(cat.id)),
   );
 
   return (
