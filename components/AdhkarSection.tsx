@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { AdhkarCategory } from "./adhkar/types";
 import { useAdhkarData, FEATURED_IDS } from "./adhkar/Useadhkardata";
 import AdhkarHeader from "./adhkar/AdhkarHeader";
