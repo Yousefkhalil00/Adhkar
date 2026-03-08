@@ -44,26 +44,6 @@ export default function SurahDetail({ surah: initialSurah }: Props) {
             <span>→</span>
             <span>السور</span>
           </button>
-
-          {/* Next surah */}
-          {surah.number < 114 && (
-            <button
-              onClick={() => router.push(`/surah/${surah.number + 1}`)}
-              className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs border border-blue-700/40 text-blue-400 hover:border-amber-400/30 hover:text-amber-300 transition-all"
-              title="السورة التالية"
-            >
-              التالية
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                className="w-3 h-3"
-              >
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
-            </button>
-          )}
         </div>
 
         {/* Center: surah info */}
@@ -74,28 +54,7 @@ export default function SurahDetail({ surah: initialSurah }: Props) {
           </p>
         </div>
 
-        {/* Left side: prev + tafsir */}
         <div className="flex items-center gap-2">
-          {/* Prev surah */}
-          {surah.number > 1 && (
-            <button
-              onClick={() => router.push(`/surah/${surah.number - 1}`)}
-              className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs border border-blue-700/40 text-blue-400 hover:border-amber-400/30 hover:text-amber-300 transition-all"
-              title="السورة السابقة"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                className="w-3 h-3"
-              >
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-              السابقة
-            </button>
-          )}
-
           {/* Tafsir full page button */}
           <button
             onClick={() => router.push(`/surah/${surah.number}/tafsir`)}
@@ -123,12 +82,50 @@ export default function SurahDetail({ surah: initialSurah }: Props) {
 
       {/* ── Surah title ─────────────────────────────────────────────── */}
       <div className="text-center mb-8">
-        <div className="flex items-center justify-center gap-3">
-          <span className="text-amber-400/30 text-3xl">﴿</span>
-          <h1 className="text-amber-300 text-4xl font-bold font-[family-name:var(--font-amiri)]">
-            {surah.name}
-          </h1>
-          <span className="text-amber-400/30 text-3xl">﴾</span>
+        <div className="flex items-center justify-between">
+          {surah.number < 114 && (
+            <button
+              onClick={() => router.push(`/surah/${surah.number + 1}`)}
+              className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs border border-blue-700/40 text-blue-400 hover:border-amber-400/30 hover:text-amber-300 transition-all"
+              title="السورة التالية"
+            >
+              التالية
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className="w-3 h-3"
+              >
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+          )}
+          <div className="flex items-center justify-center gap-3">
+            <span className="text-amber-400/30 text-3xl">﴿</span>
+            <h1 className="text-amber-300 text-4xl font-bold font-[family-name:var(--font-amiri)]">
+              {surah.name}
+            </h1>
+            <span className="text-amber-400/30 text-3xl">﴾</span>
+          </div>
+          {surah.number > 1 && (
+            <button
+              onClick={() => router.push(`/surah/${surah.number - 1}`)}
+              className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs border border-blue-700/40 text-blue-400 hover:border-amber-400/30 hover:text-amber-300 transition-all"
+              title="السورة السابقة"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className="w-3 h-3"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+              السابقة
+            </button>
+          )}
         </div>
         <p className="text-blue-400/50 text-sm mt-5">
           {surah.englishName} — {surah.englishNameTranslation}
