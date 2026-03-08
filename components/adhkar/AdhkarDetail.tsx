@@ -33,7 +33,7 @@ export default function AdhkarDetail({ category }: Props) {
     <main className="min-h-screen bg-blue-950 pb-20" dir="rtl">
       {/* Sticky header */}
       <div className="sticky top-0 z-20 bg-blue-950/95 backdrop-blur border-b border-blue-800/40 px-4 py-4">
-        <div className="max-w-[80%] mx-auto flex items-center justify-between gap-4">
+        <div className="container md:max-w-[80%] mx-auto flex items-center justify-between gap-4">
           <button
             onClick={() => router.push("/adhkar")}
             className="flex items-center gap-1.5 text-blue-300 hover:text-amber-300 transition-colors text-sm"
@@ -52,7 +52,7 @@ export default function AdhkarDetail({ category }: Props) {
         </div>
 
         {/* Progress bar */}
-        <div className="max-w-[80%] mx-auto mt-3 h-1 bg-blue-800/50 rounded-full overflow-hidden">
+        <div className="container md:max-w-[80%] mx-auto mt-3 h-1 bg-blue-800/50 rounded-full overflow-hidden">
           <div
             className="h-full bg-amber-400 rounded-full transition-all duration-500"
             style={{ width: `${(totalDone / totalItems) * 100}%` }}
@@ -60,7 +60,7 @@ export default function AdhkarDetail({ category }: Props) {
         </div>
       </div>
 
-      <div className="max-w-[80%] mx-auto px-4 pt-8">
+      <div className="container md:max-w-[80%] mx-auto px-4 pt-8">
         {/* Category audio */}
         {category.audio && (
           <div className="mb-8">

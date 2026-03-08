@@ -112,7 +112,10 @@ export default function PrayerClient() {
   }
 
   return (
-    <div className="max-w-[80%] mx-auto px-4 py-10 space-y-6" dir="rtl">
+    <div
+      className="container md:max-w-[80%] mx-auto px-4 py-10 space-y-6"
+      dir="rtl"
+    >
       {location && (
         <LocationBar
           city={location.city}

@@ -100,6 +100,26 @@ export default function AudioPlayer({
 
   const progress = duration > 0 ? currentTime / duration : 0;
 
+  const download = async () => {
+    try {
+      const res = await fetch(src);
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = title ? `${title}.mp3` : "audio.mp3";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch {
+      const a = document.createElement("a");
+      a.href = src;
+      a.download = title ? `${title}.mp3` : "audio.mp3";
+      a.click();
+    }
+  };
+
   return (
     <div
       className="
@@ -162,10 +182,8 @@ export default function AudioPlayer({
 
       <div className="px-5 py-4 flex items-center justify-between gap-3">
         <div className="flex items-center gap-2 flex-1">
-          <a
-            href={src}
-            download
-            onClick={(e) => e.stopPropagation()}
+          <button
+            onClick={download}
             className="text-blue-300 hover:text-amber-300 transition-colors"
             title="تحميل"
           >
@@ -180,7 +198,7 @@ export default function AudioPlayer({
               <polyline points="7 10 12 15 17 10" />
               <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
-          </a>
+          </button>
           <button
             onClick={toggleMute}
             className="text-blue-300 hover:text-amber-300 transition-colors text-base w-7"

@@ -33,7 +33,7 @@ export default function SurahGrid({ surahs }: Props) {
   });
 
   return (
-    <div className="max-w-[80%] mx-auto" dir="rtl">
+    <div className="container md:max-w-[80%] mx-auto" dir="rtl">
       {/* Search + filter row */}
       <div className="flex flex-col sm:flex-row gap-3 mb-8">
         {/* Search */}

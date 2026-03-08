@@ -21,7 +21,7 @@ export default function AdhkarCarousel({
   };
 
   return (
-    <div className="relative w-[80%] mx-auto">
+    <div className="relative container md:max-w-[80%] mx-auto">
       {/* Left Arrow */}
       <button
         onClick={() => scroll("left")}

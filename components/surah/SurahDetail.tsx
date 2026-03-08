@@ -32,7 +32,7 @@ export default function SurahDetail({ surah: initialSurah }: Props) {
   const BISMILLAH = "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ";
 
   return (
-    <div className="max-w-[80%] mx-auto px-4 py-8" dir="rtl">
+    <div className=" container md:max-w-[80%] mx-auto px-4 py-8" dir="rtl">
       {/* ── Top bar ─────────────────────────────────────────────────── */}
       <div className="flex items-center justify-between mb-6">
         {/* Right side: back + prev */}
@@ -150,7 +150,6 @@ export default function SurahDetail({ surah: initialSurah }: Props) {
         </button>
       </div>
 
-      {/* ── Full surah audio player ──────────────────────────────────── */}
       {showFullPlayer && (
         <div className="mb-6">
           <AudioPlayer

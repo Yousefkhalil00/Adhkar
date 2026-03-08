@@ -34,7 +34,7 @@ export default function AdhkarGrid({ categories }: Props) {
 
       <div
         className="
-          max-w-[80%] mx-auto
+          container md:max-w-[80%] mx-auto
           grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
           gap-4
         "

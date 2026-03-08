@@ -51,7 +51,7 @@ export default function TafsirView({ surah, tafsir, scrollToAyah }: Props) {
   };
 
   return (
-    <div className="max-w-[80%] mx-auto px-4 py-8" dir="rtl">
+    <div className="container md:max-w-[80%] mx-auto px-4 py-8" dir="rtl">
       <div className="flex items-center justify-between mb-6">
         <button
           onClick={() => router.push(`/surah/${surah.number}`)}

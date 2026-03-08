@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <div className="w-full mx-auto bg-blue-950 sticky top-0 z-50" dir="rtl">
-      <div className="w-[80%] mx-auto">
+      <div className="container md:max-w-[80%] mx-auto">
         <nav className=" mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link
@@ -70,7 +70,7 @@ export default function Navbar() {
         >
           <button
             onClick={() => setOpen(false)}
-            className="absolute top-5 left-20 text-white text-3xl hover:text-amber-300 transition-colors"
+            className="absolute top-5 left-5 text-white text-3xl hover:text-amber-300 transition-colors"
           >
             <HiX />
           </button>
