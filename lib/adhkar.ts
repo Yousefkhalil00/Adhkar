@@ -1,16 +1,13 @@
 import { AdhkarCategory } from "@/components/adhkar/types";
-
-const ADHKAR_JSON_URL = "@/public/adhkar.json";
+import adhkarData from "@/public/adhkar.json";
 
 export async function getAllCategories(): Promise<AdhkarCategory[]> {
-  const res = await fetch(ADHKAR_JSON_URL, { cache: "force-cache" });
-  if (!res.ok) throw new Error("فشل تحميل بيانات الأذكار");
-  return res.json();
+  return adhkarData as unknown as AdhkarCategory[];
 }
 
 export async function getCategoryById(
   id: number,
 ): Promise<AdhkarCategory | null> {
-  const categories = await getAllCategories();
+  const categories = adhkarData as unknown as AdhkarCategory[];
   return categories.find((c) => c.id === id) ?? null;
 }
