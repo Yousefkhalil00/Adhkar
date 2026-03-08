@@ -108,7 +108,7 @@ export default function SurahDetail({ surah: initialSurah }: Props) {
             </h1>
             <span className="text-amber-400/30 text-3xl">﴾</span>
           </div>
-          {surah.number > 1 && (
+          {surah.number > 1 ? (
             <button
               onClick={() => router.push(`/surah/${surah.number - 1}`)}
               className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs border border-blue-700/40 text-blue-400 hover:border-amber-400/30 hover:text-amber-300 transition-all"
@@ -125,6 +125,8 @@ export default function SurahDetail({ surah: initialSurah }: Props) {
               </svg>
               السابقة
             </button>
+          ) : (
+            <span> </span>
           )}
         </div>
         <p className="text-blue-400/50 text-sm mt-5">
