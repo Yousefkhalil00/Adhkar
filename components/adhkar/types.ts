@@ -7,9 +7,15 @@ export interface AdhkarItem {
 }
 
 export interface AdhkarCategory {
-  id: number | string;
-  title: string;
+  id: number;
+  category: string;
   audio: string;
   filename: string;
   array: AdhkarItem[];
+}
+
+export interface FeaturedCategory {
+  id: string;
+  title: string;
+  preview: string;
 }

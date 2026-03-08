@@ -1,6 +1,6 @@
-import { AdhkarCategory } from "./types";
+import { FeaturedCategory } from "./types";
 
-export const CATEGORIES: AdhkarCategory[] = [
+export const CATEGORIES: FeaturedCategory[] = [
   {
     id: "sleep",
     title: "أَذْكَارُ النَّوْمِ",
