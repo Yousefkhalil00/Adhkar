@@ -8,7 +8,7 @@ export interface AdhkarItem {
 
 export interface AdhkarCategory {
   id: number | string;
-  category: string;
+  title: string;
   audio: string;
   filename: string;
   array: AdhkarItem[];
